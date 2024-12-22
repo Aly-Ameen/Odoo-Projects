@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_orders_list,orders.list,model_orders_list,base.group_user,1,1,1,1
 access_stock_list,stock.list,model_stock_list,base.group_user,1,1,1,1
 access_warehouse_supplies,warehouse.supplies,model_warehouse_supplies,base.group_user,1,1,1,1
+access_warehouse_dashboard,warehouse.dashboard,model_warehouse_dashboard,base.group_user,1,0,0,0

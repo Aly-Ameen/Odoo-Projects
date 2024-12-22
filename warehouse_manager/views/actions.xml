@@ -37,10 +37,9 @@
     </record>
 
     <!-- Action for Warehouse Dashboard -->
-    <record id="action_warehouse_dashboard" model="ir.actions.act_window">
+    <record id="action_warehouse_manager_dashboard" model="ir.actions.act_window">
         <field name="name">Warehouse Dashboard</field>
         <field name="res_model">warehouse.dashboard</field> <!-- Reference the correct model -->
         <field name="view_mode">form</field>
-        <field name="view_id" ref="view_warehouse_dashboard"/>
     </record>
 </odoo>

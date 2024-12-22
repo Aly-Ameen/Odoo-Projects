@@ -3,29 +3,31 @@
     <menuitem
         id="warehouse_manager_root_menu"
         name="Warehouse Manager"
-        action="action_warehouse_dashboard"
+        action="action_warehouse_manager_dashboard"
+        web_icon ="warehouse_manager,/static/description/icon.png"
+
     />
     <menuitem
-        id="warehouse_processes"
+        id="warehouses_processes"
         name="Warehouse Processes"
         parent="warehouse_manager_root_menu"
     />
     <menuitem
         id="menu_orders"
         name="Orders"
-        parent="warehouse_processes"
+        parent="warehouses_processes"
         action="action_orders"
     />
     <menuitem
         id="menu_stock"
         name="Stock"
-        parent="warehouse_processes"
+        parent="warehouses_processes"
         action="action_stock"
     />
     <menuitem
         id="menu_supplies"
         name="Supplies"
-        parent="warehouse_processes"
+        parent="warehouses_processes"
         action="action_supplies"
     />
 </odoo>

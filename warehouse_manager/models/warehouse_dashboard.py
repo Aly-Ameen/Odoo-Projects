@@ -1,4 +1,3 @@
-# models/warehouse_dashboard.py
 from odoo import models, fields, api
 
 class WarehouseDashboard(models.Model):

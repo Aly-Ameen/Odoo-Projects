@@ -14,14 +14,13 @@
     'sequence': -10,
     'depends': ['base'],
     'data': [
-        'security/warehouse_security.xml',
         'security/ir.model.access.csv',
         'views/orders_view.xml',
         'views/stock_view.xml',
         'views/supplies_view.xml',
         'views/actions.xml',
-        'views/warehouse_dashboard.xml',
         'views/base_menu.xml',
+        'views/warehouse_dashboard_view.xml',
              ],
 
 }
