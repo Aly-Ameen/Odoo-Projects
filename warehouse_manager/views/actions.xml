@@ -1,0 +1,46 @@
+<!-- actions.xml -->
+<odoo>
+    <!-- Action for Orders -->
+    <record id="action_orders" model="ir.actions.act_window">
+        <field name="name">Orders</field>
+        <field name="res_model">orders.list</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new order.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for Stock -->
+    <record id="action_stock" model="ir.actions.act_window">
+        <field name="name">Stock</field>
+        <field name="res_model">stock.list</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new stock item.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for Supplies -->
+    <record id="action_supplies" model="ir.actions.act_window">
+        <field name="name">Supplies</field>
+        <field name="res_model">warehouse.supplies</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new supply item.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for Warehouse Dashboard -->
+    <record id="action_warehouse_dashboard" model="ir.actions.act_window">
+        <field name="name">Warehouse Dashboard</field>
+        <field name="res_model">warehouse.dashboard</field> <!-- Reference the correct model -->
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_warehouse_dashboard"/>
+    </record>
+</odoo>

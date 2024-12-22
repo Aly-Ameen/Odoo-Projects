@@ -1,0 +1,31 @@
+<!-- base_menu.xml -->
+<odoo>
+    <menuitem
+        id="warehouse_manager_root_menu"
+        name="Warehouse Manager"
+        action="action_warehouse_dashboard"
+    />
+    <menuitem
+        id="warehouse_processes"
+        name="Warehouse Processes"
+        parent="warehouse_manager_root_menu"
+    />
+    <menuitem
+        id="menu_orders"
+        name="Orders"
+        parent="warehouse_processes"
+        action="action_orders"
+    />
+    <menuitem
+        id="menu_stock"
+        name="Stock"
+        parent="warehouse_processes"
+        action="action_stock"
+    />
+    <menuitem
+        id="menu_supplies"
+        name="Supplies"
+        parent="warehouse_processes"
+        action="action_supplies"
+    />
+</odoo>

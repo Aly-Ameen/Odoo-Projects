@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- stock_view.xml -->
+<odoo>
+    <record id="view_stock_tree" model="ir.ui.view">
+        <field name="name">stock.tree</field>
+        <field name="model">stock.list</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="client_name"/>
+                <field name="model_name"/>
+                <field name="model_color_name"/>
+                <field name="purchasing_order_number"/>
+                <field name="po_destination"/>
+                <field name="stock_quantity"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for Stock -->
+    <record id="view_stock_form" model="ir.ui.view">
+        <field name="name">stock.form</field>
+        <field name="model">stock.list</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="client_name"/>
+                        <field name="model_name"/>
+                        <field name="model_color_name"/>
+                        <field name="model_color_code"/>
+                    </group>
+                    <group>
+                        <field name="purchasing_order_number"/>
+                        <field name="po_destination"/>
+                        <field name="stock_quantity"/>
+                    </group>
+                    <group>
+                        <field name="purchasing_order_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Supplies Used">
+                            <field name="supplies_ids">
+                                <tree editable="bottom">
+                                    <field name="item_name"/>
+                                    <field name="quantity"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

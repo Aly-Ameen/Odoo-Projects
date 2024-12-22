@@ -1,0 +1,26 @@
+<!-- warehouse_dashboard_view.xml -->
+<odoo>
+    <!-- Custom Dashboard View -->
+    <record id="view_warehouse_dashboard" model="ir.ui.view">
+        <field name="name">warehouse.dashboard</field>
+        <field name="model">warehouse.dashboard</field>
+        <field name="arch" type="xml">
+            <form string="Warehouse Dashboard">
+                <sheet>
+                    <h1>Warehouse Manager Dashboard</h1>
+                    <group>
+                        <div class="o_stat_box">
+                            <field name="total_orders" widget="statinfo" icon="fa-cubes" string="Total Orders"/>
+                        </div>
+                        <div class="o_stat_box">
+                            <field name="total_stock" widget="statinfo" icon="fa-cubes" string="Total Stock"/>
+                        </div>
+                        <div class="o_stat_box">
+                            <field name="total_supplies" widget="statinfo" icon="fa-cubes" string="Total Supplies"/>
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
