@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 class OrdersDetails(models.Model):
     _name = "orders.list"
@@ -36,3 +36,27 @@ class OrdersDetails(models.Model):
     # Relations
     stock_ids = fields.One2many('stock.list', 'purchasing_order_id', string='Stock Items')
     supplies_ids = fields.Many2many('warehouse.supplies', string='Supplies Used')
+
+    @api.model
+    def create(self, vals):
+        # Debug print
+        print("Create method called with vals:", vals)
+        # Ensure PO number is a number without commas
+        if 'purchasing_order_number' in vals and isinstance(vals['purchasing_order_number'], str):
+            vals['purchasing_order_number'] = int(vals['purchasing_order_number'].replace(',', ''))
+        return super(OrdersDetails, self).create(vals)
+
+    def write(self, vals):
+        # Debug print
+        print("Write method called with vals:", vals)
+        # Ensure PO number is a number without commas
+        if 'purchasing_order_number' in vals and isinstance(vals['purchasing_order_number'], str):
+            vals['purchasing_order_number'] = int(vals['purchasing_order_number'].replace(',', ''))
+        return super(OrdersDetails, self).write(vals)
+
+    @api.onchange('model_color_code')
+    def _onchange_model_color_code(self):
+        # Debug print
+        print("Onchange method called")
+        if self.model_color_code:
+            self.model_color_code = self.model_color_code.upper()

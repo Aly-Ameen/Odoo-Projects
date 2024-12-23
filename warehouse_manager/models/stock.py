@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 class InventoryStockStatus(models.Model):
     _name = 'stock.list'
@@ -17,3 +17,21 @@ class InventoryStockStatus(models.Model):
     # Relations
     purchasing_order_id = fields.Many2one('orders.list', string='Related Order')
     supplies_ids = fields.Many2many('warehouse.supplies', string='Supplies Used')
+
+    @api.model
+    def create(self, vals):
+        # Ensure PO number is a number without commas
+        if 'purchasing_order_number' in vals and isinstance(vals['purchasing_order_number'], str):
+            vals['purchasing_order_number'] = int(vals['purchasing_order_number'].replace(',', ''))
+        return super(InventoryStockStatus, self).create(vals)
+
+    def write(self, vals):
+        # Ensure PO number is a number without commas
+        if 'purchasing_order_number' in vals and isinstance(vals['purchasing_order_number'], str):
+            vals['purchasing_order_number'] = int(vals['purchasing_order_number'].replace(',', ''))
+        return super(InventoryStockStatus, self).write(vals)
+
+    @api.onchange('model_color_code')
+    def _onchange_model_color_code(self):
+        if self.model_color_code:
+            self.model_color_code = self.model_color_code.upper()
