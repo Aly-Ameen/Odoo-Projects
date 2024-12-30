@@ -35,3 +35,22 @@ class InventoryStockStatus(models.Model):
     def _onchange_model_color_code(self):
         if self.model_color_code:
             self.model_color_code = self.model_color_code.upper()
+
+    @api.constrains('client_name', 'model_name', 'purchasing_order_number', 'po_quantity', 'po_destination')
+    def _check_required_fields(self):
+        for record in self:
+            if not record.client_name or not record.model_name or not record.purchasing_order_number or not record.po_quantity or not record.po_destination:
+                raise models.ValidationError(
+                    "Client Name, Model Name, PO Number, PO Quantity, and PO Destination are required and cannot be null.")
+
+    @api.constrains('purchasing_order_number')
+    def _check_purchasing_order_number_length(self):
+        for record in self:
+            if record.purchasing_order_number and len(record.purchasing_order_number) > 8:
+                raise models.ValidationError("PO Number cannot exceed 8 digits.")
+
+    @api.constrains('model_color_code')
+    def _check_model_color_code_length(self):
+        for record in self:
+            if record.model_color_code and len(record.model_color_code) > 6:
+                raise models.ValidationError("Model Color Code cannot exceed 6 characters (letters or numbers).")

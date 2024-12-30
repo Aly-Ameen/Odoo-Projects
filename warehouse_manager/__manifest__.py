@@ -21,8 +21,8 @@
         'views/actions.xml',
         'views/base_menu.xml',
         'views/warehouse_dashboard_view.xml',
-             ],
-
+            ],
+    
 }
 
 

@@ -39,6 +39,29 @@ class WarehouseSupplies(models.Model):
         elif self.item_name == 'tape_roll':
             self.carton_size = False
 
+        # Fields to store `orders.list` data
+
+    customer_name = fields.Char(string='Customer Name')
+    model_name = fields.Char(string='Model Name')
+    model_color_name = fields.Char(string='Model Color Name')
+    model_color_code = fields.Char(string='Model Color Code')
+    po_number = fields.Char(string='PO Number')
+    po_quantity = fields.Integer(string='PO Quantity')
+
+    # Relation with `orders.list`
+    order_id = fields.Many2one('orders.list', string='Order', help="Related Order")
+
+    # Automatically fetch and record data from `orders.list`
+    @api.onchange('order_id')
+    def _onchange_order_id(self):
+        """Fetch related order data when an order is selected."""
+        if self.order_id:
+            self.customer_name = self.order_id.customer_name
+            self.model_name = self.order_id.model_name
+            self.model_color_name = self.order_id.model_color_name
+            self.model_color_code = self.order_id.model_color_code
+            self.po_number = self.order_id.po_number
+            self.po_quantity = self.order_id.po_quantity
+
     # Relations
-    order_ids = fields.Many2many('orders.list', string='Related Orders')
     stock_ids = fields.Many2many('stock.list', string='Related Stocks')

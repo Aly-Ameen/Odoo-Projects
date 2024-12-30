@@ -1,0 +1,24 @@
+<odoo>
+    <!-- Define assets for frontend -->
+    <template id="assets_frontend" name="your_module assets" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/warehouse_manager/static/src/css/styles.css"/>
+            <script type="text/javascript" src="/warehouse_manager/static/src/js/scripts.js">This is my App</script>
+        </xpath>
+    </template>
+
+    <!-- Define a custom page template -->
+    <template id="your_custom_page" name="Your Custom Page">
+        <t t-call="website.layout">
+            <div class="header">
+                <h1>Your Custom Odoo Page</h1>
+            </div>
+            <div class="container">
+                <div class="card">
+                    <h3>Welcome to Your Custom Page</h3>
+                    <p>This is a custom page created for your Odoo module.</p>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
