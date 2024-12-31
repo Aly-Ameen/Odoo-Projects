@@ -4,7 +4,7 @@
   <img src="static/description/logo.png" alt="Garment Warehouse Logo" width="400" height="400">
 </p>
 
-# **WAREHOUSE MANAGEMENT MODULE (for garments and apparel industry)**
+<h3 align="center"><strong>WAREHOUSE MANAGEMENT MODULE (for garments and apparel industry)</strong></h3>
 
 ## Overview
 
