@@ -1,102 +1,68 @@
-Garment Warehouse Management Module
+# **Warehouse Manager**
 
-Overview
+<img src="static/description/icon.png" alt="Garment Warehouse Logo" width="200" style="display:block; margin:0 auto;">
 
-The Garment Warehouse Management Module is an Odoo custom module designed specifically for garment manufacturing factories. It streamlines warehouse operations, manages inventory efficiently, and ensures seamless tracking of export goods.
 
-Features
 
-Comprehensive inventory management tailored for garment factories.
 
-Tracking and categorization of garment items.
+# **WAREHOUSE MANAGEMENT MODULE (for garments and apparel industry)**
 
-Support for export-specific operations.
 
-Integration with other Odoo modules for enhanced functionality.
 
-Installation
+## Overview
 
-Prerequisites
+The **Garment Warehouse Management Module** is an Odoo custom module designed specifically for garment manufacturing factories. It streamlines warehouse operations, manages inventory efficiently, and ensures seamless tracking of export goods.
 
-Odoo version: 15 Community Edition.
+## Features
 
-Required dependencies: None (built on standard Odoo features).
+- **Comprehensive inventory management** tailored for garment factories.
+- **Tracking and categorization** of garment items.
+- **Support for export-specific operations.**
 
-Steps to Install
+---
 
-Clone the repository:
+## Installation
 
-git clone https://github.com/username/garment_warehouse.git
+### Prerequisites
 
-Place the garment_warehouse folder in your Odoo addons directory.
+- Odoo version: **17 Community Edition**.
+- Required dependencies: None (built on standard Odoo features).
 
-Restart the Odoo server:
+### Steps to Install
 
-./odoo-bin -c /path/to/your/config/file
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Aly-Ameen/Odoo-Projects.git
+   ```
+2. Place the `warehouse_manager` folder in your Odoo `addons` directory.
+3. Restart the Odoo server:
 
-Log in to the Odoo backend and go to Apps.
+4. Log in to the Odoo backend and go to **Apps**.
+5. Search for `Warehouse Manager` and click **Install**.
 
-Search for Garment Warehouse and click Install.
+---
 
-Usage
+### Key Functionalities
 
-Accessing the Module
+- **Inventory Operations**: Create and manage product records with attributes specific to garment manufacturing (e.g., size, color, style).
+- **Export Tracking**: Monitor export schedules and maintain compliance with export regulations and monitor the stock level.
+---
+### v1.0.0 - Initial Release
 
-Navigate to Warehouse in the Odoo dashboard.
+- Implemented core inventory and export management functionalities.
 
-Select Garment Warehouse to manage inventory, view reports, or configure settings.
+---
 
-Key Functionalities
+## Contributors
 
-Inventory Operations: Create and manage product records with attributes specific to garment manufacturing (e.g., size, color, style).
+- **Aly Ameen** - Module Developer
 
-Export Tracking: Monitor export schedules and maintain compliance with export regulations.
+---
 
-Reporting: Generate detailed reports on stock movements, production input/output, and shipment statuses.
+## License
 
-Configuration
+This module is licensed under the [GNU Lesser General Public License version 3 (LGPL-3.0)](LICENSE).
 
-Setting Up the Module
+---
 
-Assign the Warehouse Manager role to users who will manage the module.
 
-Go to Configuration > Settings in the Garment Warehouse module.
-
-Configure:
-
-Default product categories.
-
-Measurement units (e.g., pieces, bundles).
-
-Export documentation templates.
-
-Module Structure
-
-garment_warehouse/
-├── __init__.py          # Module initialization
-├── __manifest__.py      # Module metadata
-├── models/              # Python models
-├── views/               # XML files for UI
-├── security/            # Access control and security rules
-├── data/                # Initial data (e.g., demo or config data)
-└── static/              # Static files (CSS, JS, images)
-
-Changelog
-
-v1.0.0 - Initial Release
-
-Implemented core inventory and export management functionalities.
-
-Added customizable reporting.
-
-User role configurations and access control.
-
-Contributors
-
-Ali Amin - Module Developer
-
-Additional contributors can be listed here.
-
-License
-
-This module is licensed under the MIT License.
