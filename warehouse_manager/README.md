@@ -1,6 +1,8 @@
 # **Warehouse Manager**
 
-<img src="static/description/logo.png" alt="Garment Warehouse Logo" width="500" style="display:block; margin:0 auto;">
+<p align="center">
+  <img src="static/description/logo.png" alt="Garment Warehouse Logo" width="400" height="400">
+</p>
 
 
 
