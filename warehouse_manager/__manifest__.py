@@ -1,3 +1,4 @@
+
 {
     'name': 'Warehouse Manager',
     'category': 'Warehouse',
@@ -13,6 +14,7 @@
     'auto_install': False,
     'sequence': -10,
     'depends': ['base'],
+    'images': ['static/description/icon.png'],
     'data': [
         'security/ir.model.access.csv',
         'views/orders_view.xml',
@@ -22,7 +24,7 @@
         'views/base_menu.xml',
         'views/warehouse_dashboard_view.xml',
             ],
-    
+
 }
 
 

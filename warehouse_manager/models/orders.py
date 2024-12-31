@@ -33,10 +33,12 @@ class OrdersDetails(models.Model):
     packing_list_received = fields.Boolean(string='Packing List Received', default=False)
     shipping_invoice_received = fields.Boolean(string='Shipping Invoice Received', default=False)
 
-    # Related fields:
+    # Relating with stock model:
     stock_ids = fields.One2many('stock.list', 'purchasing_order_id', string='Stock Items')
-    supplies_ids = fields.Many2many('warehouse.supplies', string='Supplies Used')
-
+    # Relation with `supplies model:
+    supplies_ids = fields.One2many(
+        'warehouse.supplies', 'order_id', string='Supplies',
+        help="Supplies linked to this order.")
 
     #Customized methods:
 

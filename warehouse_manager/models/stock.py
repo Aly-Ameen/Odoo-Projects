@@ -10,7 +10,7 @@ class InventoryStockStatus(models.Model):
     model_color_name = fields.Char('Model Color Name', help="Name of the color variant")
     model_color_code = fields.Char('Model Color Code', help="Color code for the garment")
 
-    purchasing_order_number = fields.Integer('PO Number', help="Purchase Order number")
+    purchasing_order_number = fields.Char('PO Number', help="Purchase Order number")
     po_destination = fields.Text('PO Destination', help="Destination of the goods in the PO")
     stock_quantity = fields.Integer('Stock Quantity', help="Total stock quantity in the purchase order number")
 

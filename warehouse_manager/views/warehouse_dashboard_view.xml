@@ -1,4 +1,3 @@
-<!-- warehouse_dashboard_view.xml -->
 <odoo>
     <!-- Custom Dashboard View -->
     <record id="view_warehouse_dashboard" model="ir.ui.view">
@@ -9,12 +8,15 @@
                 <sheet>
                     <h1>Warehouse Manager Dashboard</h1>
                     <group>
+                        <!-- Stat box for Total Orders -->
                         <div class="o_stat_box">
                             <field name="total_orders" widget="statinfo" icon="fa-cubes" string="Total Orders"/>
                         </div>
+                        <!-- Stat box for Total Stock -->
                         <div class="o_stat_box">
                             <field name="total_stock" widget="statinfo" icon="fa-cubes" string="Total Stock"/>
                         </div>
+                        <!-- Stat box for Total Supplies -->
                         <div class="o_stat_box">
                             <field name="total_supplies" widget="statinfo" icon="fa-cubes" string="Total Supplies"/>
                         </div>

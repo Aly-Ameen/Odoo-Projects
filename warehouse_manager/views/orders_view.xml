@@ -13,6 +13,8 @@
                 <field name="po_status"/>
                 <field name="po_quantity"/>
                 <field name="po_destination"/>
+                <!-- Add field for Supplies in the Tree view if necessary -->
+                <field name="supplies_ids"/>
             </tree>
         </field>
     </record>
@@ -65,6 +67,16 @@
                                 <tree editable="bottom">
                                     <field name="item_name"/>
                                     <field name="quantity"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <!-- New page for Supplies linked to this order -->
+                        <page string="Linked Supplies">
+                            <field name="supplies_ids">
+                                <tree editable="bottom">
+                                    <field name="item_name"/>
+                                    <field name="quantity"/>
+                                    <!-- Removed delivery_date field -->
                                 </tree>
                             </field>
                         </page>

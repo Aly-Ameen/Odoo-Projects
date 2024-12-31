@@ -4,7 +4,6 @@
         id="warehouse_manager_root_menu"
         name="Warehouse Manager"
         action="action_warehouse_manager_dashboard"
-        web_icon ="warehouse_manager,/static/description/icon.png"
 
     />
     <menuitem
