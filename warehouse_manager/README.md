@@ -1,15 +1,10 @@
-# **Warehouse Manager**
+# <div align="center">**Warehouse Manager**</div>
 
 <p align="center">
   <img src="static/description/logo.png" alt="Garment Warehouse Logo" width="400" height="400">
 </p>
 
-
-
-
 # **WAREHOUSE MANAGEMENT MODULE (for garments and apparel industry)**
-
-
 
 ## Overview
 
@@ -35,6 +30,7 @@ The **Garment Warehouse Management Module** is an Odoo custom module designed sp
 1. Clone the repository:
    ```bash
    git clone https://github.com/Aly-Ameen/Odoo-Projects.git
+
    ```
 2. Place the `warehouse_manager` folder in your Odoo `addons` directory.
 3. Restart the Odoo server:
